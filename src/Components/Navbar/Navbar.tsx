@@ -31,8 +31,8 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({ HamburgerColour }) => {
   };
 
   const [isNavOpen, setIsNavOpen] = useState<boolean | null>(false);
-  const btnRef = useRef<HTMLUListElement>(null);
-  useOnClickOutside(btnRef, () => setIsNavOpen(false));
+  const ref = useRef<HTMLUListElement>(null);
+  useOnClickOutside(ref, () => setIsNavOpen(false));
 
   return (
     <div className={styles.container}>
@@ -56,14 +56,17 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({ HamburgerColour }) => {
           className={`${isNavOpen ? styles.ul_active : undefined} ${
             styles.navbar__navlist
           }`}
-          ref={btnRef}
+          ref={ref}
+          // onClick={() => setIsNavOpen(true)}
         >
+          {/* {isNavOpen ? ( */}
           <div
             className={styles.mobileClose}
             onClick={() => setIsNavOpen(!isNavOpen)}
           >
             <FaTimes />
           </div>
+          {/* ) : null} */}
           <MenuLink url="/" path="Home" />
           <MenuLink url="/buy" path="Buy" />
           <MenuLink url="/rent" path="Rent" />
