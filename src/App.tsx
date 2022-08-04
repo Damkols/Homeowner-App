@@ -2,11 +2,12 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Home, Buy, Property, Rent, Search } from "./Pages";
 import Navbar from "./Components/Navbar/Navbar";
+import "./App.scss";
 
 const App: React.FunctionComponent = () => {
   return (
     <div className="App">
-      {/* <Routes>
+      <Routes>
         <Route
           path="*"
           element={
@@ -36,8 +37,7 @@ const App: React.FunctionComponent = () => {
             </main>
           }
         />
-      </Routes> */}
-      <Navbar />
+      </Routes>
     </div>
   );
 };

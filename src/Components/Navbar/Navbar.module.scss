@@ -19,9 +19,12 @@
   }
 
   &__logo {
-    font-size: 1.3rem;
-    color: $dark-green;
-    font-weight: 600;
+    a {
+      font-size: 1.3rem;
+      color: $dark-green;
+      font-weight: 600;
+      text-decoration: none;
+    }
   }
 
   &__mobileMenu {
@@ -74,6 +77,7 @@
         transition: color 200ms ease;
         padding-right: 5rem;
         padding-left: 5rem;
+        text-decoration: none;
         &:hover {
           color: rgb(66, 182, 118);
         }
@@ -88,9 +92,10 @@
   list-style-type: none;
 
   a {
-    color: rgb(112, 112, 112);
+    color: rgb(84, 79, 79);
     transition: color 200ms ease;
     text-decoration: none;
+    font-family: "Poppins", sans-serif;
 
     @media screen and (max-width: 600px) {
       color: whitesmoke;
@@ -122,6 +127,7 @@
   align-items: center;
   color: whitesmoke;
   font-weight: 500;
+  font-family: "Nunito Sans", sans-serif;
   @media screen and (max-width: 600px) {
     display: none;
   }
@@ -135,6 +141,7 @@
   a {
     color: $dark-green;
     font-weight: 500;
+    text-decoration: none;
   }
 
   svg {
